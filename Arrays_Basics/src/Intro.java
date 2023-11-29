@@ -87,7 +87,7 @@ public class Intro {
             }
             System.out.println();
         }*/
-        // transpose.transpose(arr, n);
+        // transpose.transposeFunc(arr, n);
         Rotate90.solution(arr, n);
         sc.close();
     }

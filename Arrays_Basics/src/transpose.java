@@ -1,6 +1,6 @@
 package Arrays_Basics.src;
 public class transpose{
-    public static void transpose(int[][] arr, int n){
+    public static int[][] transposeFunc(int[][] arr, int n){
         // Transpose of a matrix
         for(int i=0;i<n;i++){
             for(int j=0;j<i;j++){
@@ -18,5 +18,6 @@ public class transpose{
             }
             System.out.println();
         }
+        return arr;
     }
 }
