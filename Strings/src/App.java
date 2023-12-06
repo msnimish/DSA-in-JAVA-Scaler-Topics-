@@ -3,6 +3,21 @@ public class App {
         // System.out.println("Hello, World!");
         ReverseVowels("Done");
         PrintConsonants("welcometoscaler");
+        ConvertUpperCaseToLowerCase("HiCaTherIneGooDMorNIng");
+    }
+
+    public static void ConvertUpperCaseToLowerCase(String str){
+        char[] ch = str.toCharArray();
+
+        for(int i=0; i<ch.length;i++){
+            if(ch[i]>'A' && ch[i] < 'a'){
+                ch[i] = (char)(ch[i] + 'a' - 'A');
+            }
+        }
+
+        for(int i=0; i<ch.length; i++){
+            System.out.print(ch[i]);
+        }
     }
 
     public static void PrintConsonants(String str){
@@ -13,6 +28,7 @@ public class App {
             }
             System.out.print(ch);
         }
+        System.out.println();
     }
 
     public static void ReverseVowels(String str){
