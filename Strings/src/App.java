@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello, World!");
+        ReverseVowels("Done");
         PrintConsonants("welcometoscaler");
     }
 
@@ -12,5 +13,34 @@ public class App {
             }
             System.out.print(ch);
         }
+    }
+
+    public static void ReverseVowels(String str){
+        int i = 0; int j=str.length()-1;
+        StringBuilder sb = new StringBuilder(str);
+        while(i < j){
+            boolean isIVowel = checkVowel(sb.charAt(i));
+            boolean isJVowel = checkVowel(sb.charAt(j));
+            if(isIVowel && isJVowel){
+                char temp = sb.charAt(i);
+                sb.setCharAt(i, sb.charAt(j));
+                sb.setCharAt(j, temp);
+                i++; j--;
+            }else if(!isIVowel){
+                i++;
+            }else if(!isJVowel){
+                j--;
+            }else{
+                i++; j--;
+            }
+        }
+        System.out.println(sb.toString());
+    }
+
+    public static boolean checkVowel(Character ch){
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+            return true;
+        }
+        return false;
     }
 }
