@@ -1,10 +1,15 @@
+import java.util.*;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Sorting...");
         int[] A = {3,1,5,2,7,0};
-        SelectionSort(A);
+        ArrayList<Integer> AList = new ArrayList<Integer>();
+        // SelectionSort(A);
         // BubbleSort(A);
         // InsertionSort(A);
+        Arrays.sort(A);
+        System.out.println(Arrays.toString(A));
     }
 
     public static void SelectionSort(int[] arr){
