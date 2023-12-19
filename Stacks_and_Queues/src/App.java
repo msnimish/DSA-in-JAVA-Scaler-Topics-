@@ -40,9 +40,33 @@ public class App {
         System.out.println(queue.peek());
 
         // pop / remove
-        System.out.println(queue.remove());
+        // System.out.println(queue.remove());
 
-        System.out.println(queue.peek());
+        // System.out.println(queue.peek());
 
+        // Implementation of Stack using LinkedList
+        // Go to Notion
+
+        // Implementation of Queue using LinkedList
+        // Go to Notion
+        reverseFirstKOfQueue(queue, 2);
+    }
+
+    public static void reverseFirstKOfQueue(Queue<Integer> q, int K){
+        Stack<Integer> st = new Stack<>();
+        for(int i=0; i<K;i++){
+            st.push(q.remove());
+        }
+
+        for(int i=0; i<K;i++){
+            q.offer(st.pop());
+        }
+
+        int N = q.size();
+        for(int i=0;i<(N-K);i++){
+            q.offer(q.remove());
+        }
+
+        System.out.println(q.toString());
     }
 }
