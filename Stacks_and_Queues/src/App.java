@@ -49,7 +49,7 @@ public class App {
 
         // Implementation of Queue using LinkedList
         // Go to Notion
-        reverseFirstKOfQueue(queue, 2);
+        reverseFirstKOfQueue(queue, 4);
     }
 
     public static void reverseFirstKOfQueue(Queue<Integer> q, int K){
