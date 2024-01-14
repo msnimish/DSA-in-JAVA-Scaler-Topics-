@@ -16,6 +16,10 @@ public class App {
 
         // get value of specific key from HashMap
         System.out.println(population.get("USA"));
-        // population.
+        population.replace("Nepal", 3);
+        System.out.println(population.containsKey("Germany"));
+        System.out.println(population.containsValue(31));
+
+        System.out.println(population.toString());
     }
 }
